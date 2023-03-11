@@ -388,8 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcd1262ba9b97e40890b05b69069bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: 0
-  battlePosition: {fileID: 0}
 --- !u!114 &373636819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,8 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcd1262ba9b97e40890b05b69069bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: 0
-  battlePosition: {fileID: 0}
 --- !u!114 &662265659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 1506254031}
   zoomTarget: {fileID: 405670959}
+  UIcamera: {fileID: 2028941073}
 --- !u!1 &996950444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,8 +1725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcd1262ba9b97e40890b05b69069bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: 0
-  battlePosition: {fileID: 0}
 --- !u!114 &1687744300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2246,8 +2241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcd1262ba9b97e40890b05b69069bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: 0
-  battlePosition: {fileID: 0}
 --- !u!95 &2015510004
 Animator:
   serializedVersion: 5
@@ -2412,8 +2405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcd1262ba9b97e40890b05b69069bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally: 0
-  battlePosition: {fileID: 0}
 --- !u!114 &2108779320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,6 +2476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 405670959}
     m_Modifications:
+    - target: {fileID: 3550196803238224194, guid: 31c21e2d9c583e340999bcc8705b1ebd, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7211664518321714930, guid: 31c21e2d9c583e340999bcc8705b1ebd, type: 3}
       propertyPath: m_Name
       value: CombatCharacter

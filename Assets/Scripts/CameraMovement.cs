@@ -8,6 +8,8 @@ public class CameraMovement : MonoBehaviour
     public Transform followTarget;
     public Transform zoomTarget;
 
+    public GameObject UIcamera;
+
     private Vector3 offset = new Vector3(0, 8, -16);
 
     private static bool CameraLock;
@@ -26,7 +28,7 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator CameraZoom3()
     {
-
+        UIcamera.SetActive(false);
         CameraLock = true;
         float time = 0;
         float swerveDuration = 0.7f;
@@ -56,5 +58,6 @@ public class CameraMovement : MonoBehaviour
             yield return null;
         }
         CameraLock = false;
+        UIcamera.SetActive(true);
     }
 }
