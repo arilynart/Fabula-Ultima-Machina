@@ -19,6 +19,6 @@ public class CameraFacingBillboard : MonoBehaviour
 
         transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.forward,
             m_Camera.transform.rotation * Vector3.up);
-        spriteRenderer.sortingOrder = -Mathf.FloorToInt(transform.position.z);
+        //spriteRenderer.sortingOrder = -Mathf.FloorToInt(transform.position.z);
     }
 }

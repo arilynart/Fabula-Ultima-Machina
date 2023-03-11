@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
+    private Vector3 lastVelocity;
 
     private void Awake()
     {
@@ -18,17 +19,20 @@ public class MovementController : MonoBehaviour
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (input.magnitude <= 0)
+        if (input.magnitude == 0 && lastVelocity.magnitude > 0)
         {
             animator.Play("Base Layer.Idle");
             agent.destination = transform.position;
-            return;
+        }
+        else
+        {
+            if (Mathf.Abs(input.y) > 0 || Mathf.Abs(input.x) > 0)
+            {
+                MoveCharacter(input);
+            }
         }
 
-        if (Mathf.Abs(input.y) > 0 || Mathf.Abs(input.x) > 0)
-        {
-            MoveCharacter(input);
-        }
+        lastVelocity = agent.velocity;
     }
 
     private void MoveCharacter(Vector2 input)
